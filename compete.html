@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compete-Blaze Gaming</title>
+    <link rel="icon" type="image/png" href="logos.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%; /* Ensuring no horizontal scroll */
+            height: 100%;
+            font-family: 'Josefin Sans', sans-serif; /* Adding custom font */
+            display: flex;
+            flex-direction: column; /* To stack elements vertically */
+            align-items: center;
+            background-color: #000000; /* Setting background to black */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            width: 100%; /* To make header full width */
+            background-color: #000000; /* Same color as body */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .centered-logo {
+            width: 190px;
+        }
+
+        .flashcard-container {
+            width: 100%; /* Make the container full width */
+            max-width: 800px; /* Adjust the max width of the flashcards container */
+            margin-top: 50px; /* Adding space between header and flashcards */
+            padding: 0 10px; /* Add some padding to prevent touching the screen edges */
+            box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+        }
+
+        .flashcard {
+            position: relative; /* Make the flashcard the reference point for the label */
+            width: 100%; /* Make flashcard full width */
+            height: auto; /* Adjust height to auto */
+            border: 3px solid orange;
+            border-radius: 20px; /* Adding curves to the corners */
+            overflow: hidden; /* Hide overflowing content */
+            margin-bottom: 20px; /* Add margin between flashcard containers */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flashcard img {
+            width: 100%;
+            height: auto; /* Adjust height to auto to fit container */
+            object-fit: cover; /* Fit the entire image within the container */
+            flex: 1;
+        }
+
+        .live-label {
+            position: absolute;
+            top: 10px; /* Position the label 10px from the top */
+            left: 10px; /* Position the label 10px from the left */
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .tournament-banner {
+            width: 100%; /* Make the banner full width */
+            background-color: #002147; /* Oxford blue background color */
+            color: white; /* White text color */
+            text-align: center; /* Center the text */
+            padding: 10px 0; /* Add some padding */
+            box-sizing: border-box; /* Ensure padding is included in the element's width */
+            border-radius: 0 0 20px 20px; /* Add curves to the bottom corners */
+        }
+
+        a.flashcard-link {
+            text-decoration: none; /* Remove underline from links */
+            display: block; /* Make the anchor a block element */
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                height: 80px; /* Reduce header height on smaller screens */
+            }
+
+            .centered-logo {
+                width: 150px; /* Adjust logo size for smaller screens */
+            }
+
+            .flashcard-container {
+                margin-top: 20px; /* Reduce margin-top for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .live-label {
+                font-size: 12px; /* Adjust label font size for smaller screens */
+                padding: 3px 7px; /* Adjust label padding for smaller screens */
+            }
+
+            .centered-logo {
+                width: 120px; /* Adjust logo size for very small screens */
+            }
+
+            .header-container {
+                height: 60px; /* Reduce header height for very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="blaze.png" alt="Blaze Logo" class="centered-logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="flashcard-container">
+        <a href="https://example.com/fort" class="flashcard-link">
+            <div class="flashcard">
+                <div class="live-label">LIVE</div>
+                <img src="fort.png" alt="Fort Image">
+                <div class="tournament-banner">
+                    BLAZE tournaments
+                </div>
+            </div>
+        </a>
+
+        <a href="https://example.com/codd" class="flashcard-link">
+            <div class="flashcard">
+                <div class="live-label">LIVE</div>
+                <img src="codd.png" alt="Codd Image">
+                <div class="tournament-banner">
+                    BLAZE tournaments
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
